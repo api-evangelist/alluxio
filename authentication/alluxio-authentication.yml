@@ -1,0 +1,40 @@
+generated: '2026-07-17'
+method: searched
+source: >-
+  https://documentation.alluxio.io/ee-ai-en/data-access/s3-api.md ,
+  https://documentation.alluxio.io/ee-ai-en/administration/security/enabling-authentication.md ,
+  https://documentation.alluxio.io/ee-ai-en/administration/security/enabling-authorization.md
+note: >-
+  Derived from Alluxio docs rather than an OpenAPI spec (Alluxio publishes no OpenAPI). Alluxio is
+  self-hosted, so authentication is a deployment configuration, not a hosted credential issuer.
+summary:
+  types: [http-signature, none, tls-mutual]
+  interfaces: [s3-api, posix-fuse, python-fsspec]
+schemes:
+  - name: s3-simple-auth
+    interface: S3 API
+    type: http
+    scheme: aws-signature-v4
+    description: >-
+      The S3-compatible REST API parses the AWS Signature V4 Authorization header to extract the
+      username. Under the default SIMPLE mode the signature itself is NOT validated and the secret
+      key may be any non-empty string; if no access key is provided, operations run as the worker
+      process user.
+    ports: {http: 29998, https: 29996}
+    source: https://documentation.alluxio.io/ee-ai-en/data-access/s3-api.md
+  - name: cluster-authentication
+    interface: Alluxio RPC / cluster
+    type: sasl
+    modes: [SIMPLE, NOSASL]
+    description: Alluxio cluster authentication mode; SIMPLE (username from OS) is the default, NOSASL disables auth.
+    source: https://documentation.alluxio.io/ee-ai-en/administration/security/enabling-authentication.md
+  - name: authorization
+    interface: filesystem
+    type: posix-permissions
+    description: POSIX-style permission model (owner/group/mode) for authorization over Alluxio paths.
+    source: https://documentation.alluxio.io/ee-ai-en/administration/security/enabling-authorization.md
+  - name: tls
+    interface: transport
+    type: mutualTLS
+    description: Optional TLS for securing Alluxio RPC and the S3 API endpoint (HTTPS on port 29996).
+    source: https://documentation.alluxio.io/ee-ai-en/administration/security/securing-alluxio-with-tls.md
