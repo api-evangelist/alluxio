@@ -1,0 +1,27 @@
+generated: '2026-07-17'
+method: searched
+source: https://documentation.alluxio.io/ee-ai-en/data-access/s3-api.md
+note: >-
+  Cross-cutting semantics for the Alluxio S3-compatible REST API, captured from docs (no OpenAPI
+  published). The API follows Amazon S3 conventions, so S3 client behavior applies.
+authentication:
+  style: aws-signature-v4 header (SIMPLE mode does not validate the signature)
+  ref: authentication/alluxio-authentication.yml
+addressing:
+  request_style: path-style only (http://<endpoint>/<bucket>/<key>); virtual-hosted style not supported
+  buckets: mount points are exposed as S3 buckets
+idempotency:
+  supported: false
+  note: No provider-documented idempotency-key contract; PUT/GET/DELETE follow standard S3 semantics.
+pagination:
+  style: s3-list (ListObjects continuation tokens / markers, max-keys)
+multipart:
+  supported: true
+  operations: [CreateMultipartUpload, UploadPart, CompleteMultipartUpload]
+error_envelope:
+  format: S3 XML error responses (Code / Message)
+versioning:
+  interface_versioning: S3 API compatibility; product versioned as AI-3.x (see lifecycle/)
+rate_limiting:
+  documented: false
+  note: Alluxio provides UFS bandwidth control / limiting as a server-side config, not client rate-limit headers.

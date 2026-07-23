@@ -1,0 +1,28 @@
+generated: '2026-07-17'
+method: probed
+source: live probes of https://www.alluxio.io and https://documentation.alluxio.io
+note: No .well-known discovery documents are published. Root /security.txt also absent. Recorded for auditability; no WellKnown/SecurityTxt pointer wired because nothing was found (absence is valid data).
+hosts:
+  - host: https://www.alluxio.io
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /security.txt
+        status: 404
+  - host: https://documentation.alluxio.io
+    documents:
+      - path: /.well-known/security.txt
+        status: 307
+        note: redirect, not a served security.txt
+      - path: /.well-known/api-catalog
+        status: 307
+      - path: /.well-known/ai-plugin.json
+        status: 307

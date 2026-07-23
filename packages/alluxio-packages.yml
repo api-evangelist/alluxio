@@ -1,0 +1,40 @@
+generated: '2026-07-17'
+method: searched
+source: https://pypi.org/project/alluxio/ , https://search.maven.org/search?q=g:org.alluxio , https://github.com/Alluxio/alluxio-py
+packages:
+  - language: python
+    registry: pypi
+    name: alluxio
+    version: 1.0.0
+    url: https://pypi.org/project/alluxio/
+    install: pip install alluxio
+    source: https://github.com/Alluxio/alluxio-py
+    description: Alluxio Python library — API to interact with Alluxio servers.
+    official: true
+  - language: python
+    registry: pypi
+    name: alluxio-python-library
+    version: 1.0.0
+    url: https://pypi.org/project/alluxio-python-library/
+    install: pip install alluxio-python-library
+    source: https://github.com/Alluxio/alluxio-py
+    description: Alluxio Python library — API to interact with Alluxio servers (distribution alias).
+    official: true
+  - language: python
+    registry: pypi
+    name: alluxiofs
+    version: 1.1.17
+    url: https://pypi.org/project/alluxiofs/
+    install: pip install alluxiofs
+    source: https://github.com/fsspec/alluxiofs
+    description: Alluxio fsspec (filesystem-spec) implementation — Python FSSpec API for Alluxio.
+    official: false
+    note: Published under the fsspec GitHub org; developed with Alluxio maintainers but not under the Alluxio org.
+  - language: java
+    registry: maven-central
+    name: org.alluxio (91 artifacts; e.g. alluxio-core-client-fs, alluxio-shaded-client)
+    url: https://search.maven.org/search?q=g:org.alluxio
+    install: '<dependency><groupId>org.alluxio</groupId><artifactId>alluxio-shaded-client</artifactId></dependency>'
+    source: https://github.com/Alluxio/alluxio
+    description: Alluxio Java client and core libraries published under the org.alluxio Maven group.
+    official: true

@@ -1,0 +1,30 @@
+generated: '2026-07-17'
+method: searched
+source: https://documentation.alluxio.io/ee-ai-en/release-notes.md , https://github.com/Alluxio/alluxio/releases
+note: >-
+  Two release trains exist. The open-source Apache-2.0 project (github.com/Alluxio/alluxio)
+  last cut v2.9.4 (2024-06-11). The commercial Enterprise AI product is versioned separately
+  (AI-3.x) and is the actively developed line documented at documentation.alluxio.io.
+schemes:
+  - line: open-source
+    scheme: semver
+    current: 2.9.4
+    releases_url: https://github.com/Alluxio/alluxio/releases
+  - line: enterprise-ai
+    scheme: 'AI-<major>.<minor> (e.g. AI-3.9)'
+    current: AI-3.9
+    releases_url: https://documentation.alluxio.io/ee-ai-en/release-notes.md
+entries:
+  - version: AI-3.9
+    line: enterprise-ai
+    status: stable
+    highlights:
+      - FUSE Full POSIX Workspace for interactive ML workloads (8.99 GB/s peak sequential write throughput).
+      - S3 multipart upload and checkpoint optimization (10.20 GB/s single-worker checkpoint write throughput).
+      - Native RDMA transport scaling to 62.5 GB/s aggregate on 200Gbps InfiniBand clusters.
+      - Enhanced multi-tenant isolation, independent worker service binding, automated background task management.
+  - version: v2.9.4
+    line: open-source
+    date: '2024-06-11'
+    highlights:
+      - Latest tagged release of the Apache-2.0 open-source Alluxio data-orchestration project.

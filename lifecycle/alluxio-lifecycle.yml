@@ -1,0 +1,24 @@
+generated: '2026-07-17'
+method: searched
+source: https://documentation.alluxio.io/ee-ai-en/release-notes.md , https://github.com/Alluxio/alluxio
+note: >-
+  Alluxio is deployed software (self-hosted on the customer's Kubernetes/Docker/cloud cluster),
+  not a hosted SaaS API. There is therefore no public multi-tenant status page or public API
+  deprecation/Sunset-header contract to capture — so no StatusPage or Deprecation pointer is wired.
+versioning:
+  open_source:
+    scheme: semver
+    current: 2.9.4
+    docs: https://github.com/Alluxio/alluxio/releases
+  enterprise_ai:
+    scheme: 'AI-<major>.<minor>'
+    current: AI-3.9
+    docs: https://documentation.alluxio.io/ee-ai-en/release-notes.md
+deprecation:
+  policy_url: null
+  sunset_header: false
+sla:
+  url: null
+  note: SLA is contractual (commercial Enterprise AI), not publicly published.
+status_page: null
+release_notes: https://documentation.alluxio.io/ee-ai-en/release-notes.md
