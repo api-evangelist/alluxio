@@ -52,12 +52,12 @@ tags:
 - Data Orchestration
 - Data Caching
 - AI Infrastructure
-- Machine-Learning
+- Machine Learning
 - Analytics
 - Distributed Storage
 - Object Storage
 - S3
-- Open-Source
+- Open Source
 tags_raw:
 - Company
 - Data Orchestration
@@ -69,6 +69,8 @@ tags_raw:
 - Object Storage
 - S3
 - Open Source
+- Machine-Learning
+- Open-Source
 apis:
 - name: Alluxio S3 API
   description: >-
