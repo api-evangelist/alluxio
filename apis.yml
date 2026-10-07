@@ -92,6 +92,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Plans
+  url: plans/alluxio-plans-pricing.yml
 - url: https://www.alluxio.io/blog/rss.xml
   type: BlogRSS
 - type: DomainSecurity
