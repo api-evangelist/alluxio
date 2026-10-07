@@ -1,0 +1,32 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://www.alluxio.io/pricing
+sources:
+- https://www.alluxio.io/pricing
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T104522
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: negotiated
+delivery:
+  delivery: open-core
+  method: page
+  read: '2026-10-07'
+  evidence: Alluxio Community Edition, based on the open source project, is always free and comes with
+    community forum support.
+  free_edition: Alluxio Community Edition
+published: false
+note: No numeric prices; free community edition alongside quote-based enterprise licences with custom
+  terms and volume pricing.
+plan_count: 2
+plans:
+- name: Community Edition
+  price_text: always free
+  period: none
+  included_quota: based on the open source project, community forum support
+- name: Enterprise Edition Subscriptions
+  price_text: Request a Quote
+  period: none
+  included_quota: software and SLA-based technical support
